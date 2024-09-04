@@ -8,7 +8,7 @@ public record UserDTO(String name, String email, String password) {
         User user = new User();
         user.setName(this.name);
         user.setEmail(this.email);
-        user.setPassword(this.password); // Nota: Pode precisar ser codificado quando salvo
+        user.setPassword(this.password);
         return user;
     }
 }

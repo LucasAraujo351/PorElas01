@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public User saveUser(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword())); // Codifica a senha
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
@@ -36,7 +36,7 @@ public class UserService {
             if (userDTO.name() != null) user.setName(userDTO.name());
             if (userDTO.email() != null) user.setEmail(userDTO.email());
             if (userDTO.password() != null && !userDTO.password().isEmpty()) {
-                user.setPassword(passwordEncoder.encode(userDTO.password())); // Codifica a senha
+                user.setPassword(passwordEncoder.encode(userDTO.password()));
             }
             return userRepository.save(user);
         }

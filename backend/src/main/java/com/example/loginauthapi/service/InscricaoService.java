@@ -17,24 +17,24 @@ import java.util.Optional;
 public class InscricaoService {
     private final InscricaoRepository inscricaoRepository;
     private final UserRepository userRepository;
-    private final CursoRepository cursoRepository; // Atualize para CursoRepository
+    private final CursoRepository cursoRepository;
 
-    public Inscricao inscreverNoCurso(String userId, String cursoId) { // Atualize para cursoId
+    public Inscricao inscreverNoCurso(String userId, String cursoId) {
         Optional<User> user = userRepository.findById(userId);
-        Optional<Curso> curso = cursoRepository.findById(cursoId); // Atualize para Curso
+        Optional<Curso> curso = cursoRepository.findById(cursoId);
 
         if (user.isPresent() && curso.isPresent()) {
             Inscricao inscricao = new Inscricao();
             inscricao.setUser(user.get());
-            inscricao.setCurso(curso.get()); // Atualize para Curso
+            inscricao.setCurso(curso.get());
             return inscricaoRepository.save(inscricao);
         } else {
             throw new RuntimeException("Usuário ou Curso não encontrado");
         }
     }
 
-    public void cancelarInscricao(String userId, String cursoId) { // Atualize para cursoId
-        Optional<Inscricao> inscricao = inscricaoRepository.findByUserIdAndCursoId(userId, cursoId); // Atualize para cursoId
+    public void cancelarInscricao(String userId, String cursoId) {
+        Optional<Inscricao> inscricao = inscricaoRepository.findByUserIdAndCursoId(userId, cursoId);
 
         inscricao.ifPresent(inscricaoRepository::delete);
     }

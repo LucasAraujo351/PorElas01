@@ -17,9 +17,9 @@ public class InscricaoController {
     private final InscricaoService inscricaoService;
 
     @PostMapping("/inscrever")
-    public ResponseEntity<Inscricao> inscreverNoCurso(@RequestParam String userId, @RequestParam String cursoId) { // Atualize para cursoId
+    public ResponseEntity<Inscricao> inscreverNoCurso(@RequestParam String userId, @RequestParam String cursoId) {
         try {
-            Inscricao inscricao = inscricaoService.inscreverNoCurso(userId, cursoId); // Atualize para cursoId
+            Inscricao inscricao = inscricaoService.inscreverNoCurso(userId, cursoId);
             return ResponseEntity.ok(inscricao);
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().build();
@@ -27,9 +27,9 @@ public class InscricaoController {
     }
 
     @PostMapping("/cancelar")
-    public ResponseEntity<Void> cancelarInscricao(@RequestParam String userId, @RequestParam String cursoId) { // Atualize para cursoId
+    public ResponseEntity<Void> cancelarInscricao(@RequestParam String userId, @RequestParam String cursoId) {
         try {
-            inscricaoService.cancelarInscricao(userId, cursoId); // Atualize para cursoId
+            inscricaoService.cancelarInscricao(userId, cursoId);
             return ResponseEntity.noContent().build();
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().build();
