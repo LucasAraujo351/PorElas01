@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public User saveUser(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword())); // Codifica a senha
+        user.setPassword(passwordEncoder.encode(user.getPassword())); 
         return userRepository.save(user);
     }
 
