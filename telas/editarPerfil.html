@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Editar Perfil | PorElas</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <h2><img src="img/logo.png" alt="logo site" class="logo"></h2>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-burguer">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="direitos.html">Direitos</a></li>
+                        <li><a href="capacitacao.html">Capacitação</a></li>
+                        <li><a href="loja.html">Loja</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="dicas.html">Dicas</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="edit-profile-container">
+        <h1>Editar Perfil</h1>
+        <form action="salvar-perfil.html" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="Maria Silva Gonzalez" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="maria.g@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Nova Senha:</label>
+                <input type="password" id="senha" name="senha">
+            </div>
+
+            <div class="form-group">
+                <label for="confirma-senha">Confirmar Nova Senha:</label>
+                <input type="password" id="confirma-senha" name="confirma-senha">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Salvar Alterações</button>
+                <a href="perfil.html" class="cancel-btn">Cancelar</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="menu.js"></script>
+</body>
+</html>
