@@ -1,0 +1,40 @@
+
+    <main>
+        <section class="payment">
+            <h1> Pagamento</h1>
+            <form action="/processar-pagamento" method="post">
+                <fieldset>
+                    <legend>Informações do Cartão</legend>
+                    <label for="nome-titular">Nome do Titular:</label>
+                    <input type="text" id="nome-titular" name="nome-titular" required>
+
+                    <label for="numero-cartao">Número do Cartão:</label>
+                    <input type="text" id="numero-cartao" name="numero-cartao" pattern="\d{16}" required>
+
+                    <label for="validade-cartao">Data de Validade:</label>
+                    <input type="text" id="validade-cartao" name="validade-cartao" placeholder="MM/AA" pattern="\d{2}/\d{2}" required>
+
+                    <label for="codigo-seguranca">Código de Segurança:</label>
+                    <input type="text" id="codigo-seguranca" name="codigo-seguranca" pattern="\d{3}" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço de Cobrança</legend>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado" required>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" required>
+                </fieldset>
+
+                <button type="submit" class="btn-comprar"><a href="pagSucesso.html">Pagar</a></button>
+            </form>
+        </section>
+    </main>
+

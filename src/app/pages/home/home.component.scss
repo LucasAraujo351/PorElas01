@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+  }
+  
+  header {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 80px;
+  }
+  
+  .header-nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .header-nav a {
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #eadaff;
+  }
+  
+  .content {
+    width: 80%;
+    background-color: white;
+    padding: 80px 0;
+  
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+  
+  .container-text-initial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 30px;
+  }
+  
+  .container-text-initial h1 {
+    color: #7001fd;
+    font-size: 50px;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .container-text-initial p {
+    color: black;
+    font-size: 32px;
+    text-align: center;
+    max-width: 500px;
+    font-weight: 300;
+  }
+  
+  .container-initial-image {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .rectangle {
+    position: absolute;
+    bottom: 90px;
+    right: 90px;
+    z-index: 1;
+  }
+  
+  .container-initial-image img {
+    width: 150%;
+    z-index: 99;
+  }
+  
+  .container-faq {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+    gap: 40px;
+  }
+  
+  .card-faq {
+    background-color: #eadaff;
+    border-radius: 40px;
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .col-faq-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    gap: 20px;
+  }
+  
+  .col-faq-text h2 {
+    font-size: 20px;
+  }
+  
+  .col-faq-text p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 44px;
+  }
+  
+  .col-faq-img {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .container-about {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  .card-about {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eadaff;
+    border-radius: 40px;
+    padding: 20px;
+    gap: 40px;
+  }
+  
+  .card-about p {
+    font-size: 20px;
+    line-height: 44px;
+    font-weight: 300;
+  }
+  
+  .container-doubts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 40px;
+  }
+  
+  .container-doubts h2 {
+    font-size: 30px;
+  }
+  
+  .card-doubt {
+    display: flex;
+    width: 90%;
+    padding: 20px;
+    background-color: #eeeeee;
+    border-radius: 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card-doubt h3 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
